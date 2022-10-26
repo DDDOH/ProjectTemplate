@@ -1,3 +1,4 @@
+<<<<<<< ours
 # copy current folder to a result directory
 import shutil
 import platform
@@ -38,4 +39,10 @@ text_file.close()
 
 
 
+=======
+import utils
+
+result_dir = utils.create_result_folder()
+gpu_id, device = utils.get_device()
+>>>>>>> theirs
 
