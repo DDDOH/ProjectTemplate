@@ -19,9 +19,10 @@ Simply replace the existing folder path and other settings to yours. Pick the co
   1. The python command line input to start the experiment
   2. The time when starting the experiment
   3. The original path of the script
-- [ ] A function to automatically set PyTorch device
-  - [ ] If no GPU, use CPU
-  - [ ] If multiple GPUs are available, automatically select the most 'idle' one.
+- [x] A function to automatically set PyTorch device
+  - [x] If no GPU, use CPU
+  - [x] If multiple GPUs are available, automatically select the most 'idle' one.
+- [ ] A decorator for saving original visualization data while plotting figures.
 - [ ] Python `argparse` template.
 
 
