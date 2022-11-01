@@ -88,10 +88,6 @@ if torch.cuda.is_available():
     import pynvml as pynvml
 
 
-
-
-
-
 def get_device(gpu_id=None):
     """
     Use cpu if gpu available.
@@ -145,6 +141,14 @@ def get_device(gpu_id=None):
 
 
 
+
+
+# record and visualize memory usage
+import os, psutil
+process = psutil.Process(os.getpid())
+
+def record_memory_usage(result_dir):
+    # TODO
 
 
 
