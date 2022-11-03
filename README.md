@@ -8,7 +8,7 @@ This is a basement folder for a new research project. I have implemented some si
 
 ## Usage
 
-Simply replace the existing folder path and other settings to yours. Pick the code snippets that you need.
+Simply replace the existing folder path and other settings to yours. Pick the code snippets that you need. Example usages are provided in the main.py file.
 
 
 
@@ -22,10 +22,10 @@ Simply replace the existing folder path and other settings to yours. Pick the co
 - [x] A function to automatically set PyTorch device
   - [x] If no GPU, use CPU
   - [x] If multiple GPUs are available, automatically select the most 'idle' one.
-- [ ] A decorator for saving original visualization data while plotting figures.
+- [x] A decorator for saving original visualization data while plotting figures.
+- [x] A class for monitoring memory usage.
 - [ ] Python `argparse` template.
-
-
+- [ ] A bash script for run a series of jobs and keeping system workload within a certain level.
 - [ ] A simple bash script for syncing code and results between remote server and local machine with rsync.
 - [ ] A sample jupyter notebook for reading and visualizing multiple tensorboard files together.
 - [ ] A template for experiment management tools, such as [NNI](https://nni.readthedocs.io/).

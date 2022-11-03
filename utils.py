@@ -1,11 +1,12 @@
-# copy current folder to a result directory
+
 import shutil
-import platform
 import datetime
 import os
+import matplotlib.pyplot as plt
 
 
 def create_result_folder(result_dir, exp_label):
+    # copy current folder to a result directory
     time_str = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     result_dir = os.path.join(result_dir, exp_label+time_str)
     # copy all the files in cwd to result_dir, except for the 'data.csv' file
@@ -82,7 +83,6 @@ def check_gpu_usage():
 
 # automatically select PyTorch device
 import torch
-import platform
 import psutil
 if torch.cuda.is_available():
     import pynvml as pynvml
@@ -147,8 +147,24 @@ def get_device(gpu_id=None):
 import os, psutil
 process = psutil.Process(os.getpid())
 
-def record_memory_usage(result_dir):
-    # TODO
+
+class MemoryRecoder():
+    def __init__(self, result_dir, with_time=False):
+        self.result_dir = result_dir
+        self.rec = {}
+        if with_time:
+            raise NotImplemented
+
+    def record(self, label):
+        self.rec[label] = process.memory_info().rss / 1024 / 1024 # in MB
+
+    def plot(self):
+        plt.figure()
+        plt.plot(self.rec.keys(), self.rec.values())
+        plt.title('Memory usage in MB')
+        plt.savefig(os.path.join(self.result_dir, 'memory_rec.png'))
+        plt.close()
+
 
 
 
