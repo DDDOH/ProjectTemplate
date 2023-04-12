@@ -1,5 +1,7 @@
 # ProjectTemplate
 
+Status: Actively maintained. Any question or suggestion is welcome. Contact us by [email](mailto:yufeng_zheng@berkeley.edu?subject=[GitHub]%20Project%20Template) or raise an issue. We will give response within 48 hours.
+
 Start your next deep learning project with fundamental experiment management scripts.
 
 This is a basement folder for a new research project. I have implemented some simple yet necessary scripts for running a deep learning experiment. When starting a new project, you can get rid of the time consuming part which is basically implementing these functions repetitively.
